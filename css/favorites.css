@@ -1,0 +1,68 @@
+#favorites-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Style for favorite items */
+.favorite-item {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for favorite items on hover */
+.favorite-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for product image */
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Style for product info */
+.product-info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Style for product name */
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for product price */
+.product-price {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Style for remove button */
+.remove-button {
+  background-color: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style for remove button on hover */
+.remove-button:hover {
+  background-color: #e04444;
+}
