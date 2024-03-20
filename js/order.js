@@ -58,9 +58,9 @@ if (orders && orders.length > 0) {
             productPrice.classList.add("product-price");
 
             // Product Quantity
-            let productQuantity = document.createElement("p");
-            productQuantity.textContent = "Quantity: " + product.quantity;
-            productQuantity.classList.add("product-quantity");
+            // let productQuantity = document.createElement("p");
+            // productQuantity.textContent = "Quantity: " + product.quantity;
+            // productQuantity.classList.add("product-quantity");
 
             // Append product image to the image container
             imgContainer.appendChild(img);
@@ -68,7 +68,7 @@ if (orders && orders.length > 0) {
             // Append product details to the details container
             detailsContainer.appendChild(productName);
             detailsContainer.appendChild(productPrice);
-            detailsContainer.appendChild(productQuantity);
+            // detailsContainer.appendChild(productQuantity);
 
             // Append image container and details container to the product details div
             productDetailsDiv.appendChild(imgContainer);

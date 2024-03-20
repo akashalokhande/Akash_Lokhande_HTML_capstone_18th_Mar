@@ -14,7 +14,7 @@
   <img src="${item.image}" alt="${item.name}" class="product-image">
   <div class="product-info">
     <span class="product-name">${item.name}</span>
-    <span class="product-price">$${item.price.toFixed(2)}</span>
+    <span class="product-price">₹${item.price}</span>
     <button class="remove-button" onclick="removeFromFavorites('${
       item.name
     }')">Remove</button>

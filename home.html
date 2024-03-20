@@ -6,138 +6,175 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <header>
-      <h1>Bella</h1>
+      <nav>
+        <button id="toggleBtn">&#9776;</button>
+        <div id="navLinks">
+          <a href="./home.html">Home</a>
+          <a href="./shopping.html">Shop</a>
+          <a href="./favorites.html"> My Favorites</a>
+          <a href="order.html"> My Orders</a>
+          <a href="./cart.html">My Cart</a>
+        </div>
+      </nav>
     </header>
 
-    <nav>
-      <img
-        id="logo"
-        src="./css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.webp"
-        alt="Your Brand Logo"
-      />
-
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="./favorites.html">my favorites</a>
-      <a href="order.html">Orders</a>
-      <a href="#">Contact</a>
-      <a href="./cart.html">My Cart</a>
-    </nav>
     <main>
-      <section class="product-container">
-        <div class="card">
-          <img src="./css/images/download.jpeg" alt="Product Image" />
-          <div class="card-title">tv</div>
-          <div class="description">
-            Product Description Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </div>
-          <p>$19.99</p>
-          <div class="btn-container">
-            <button class="btn buy"
-            onclick="addToOrder('tv', './css/images/download.jpeg', 19.99)"
-            >Buy Now</button>
-            <button
-              class="btn add"
-              onclick="addToCart('tv', './css/images/download.jpeg', 19.99)"
-            >
-              Add to Cart
-            </button>
-            <button
-              onclick="toggleFavorite(this,'tv', './css/images/download.jpeg', 19.99)"
-              class="favorite-button"
-            >
-              Favorite
-            </button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./css/images/download.jpg" alt="Product Image" />
-          <div class="card-title">shirt</div>
-          <div class="description">
-            Product Description Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </div>
-          <p>$19.99</p>
-          <div class="btn-container">
-            <button class="btn buy"
-            onclick="addToOrder('shirt', './css/images/download.jpg', 19.99)"
-            >Buy Now</button>
-            <button
-              class="btn add"
-              onclick="addToCart('shirt','./css/images/download.jpg', 19.99)"
-            >
-              Add to Cart
-            </button>
-            <button
-              onclick="toggleFavorite(this,'shirt', './css/images/download.jpeg', 19.99)"
-              class="favorite-button"
-            >
-              Favorite
-            </button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./css/images/download.png" id="imgs" alt="Product Image" />
-          <div class="card-title">bella</div>
-          <div class="description">
-            Product Description Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </div>
-          <p>$19.99</p>
-          <div class="btn-container">
-            <button class="btn buy"
-            onclick="addToOrder('bella', './css/images/download.png', 19.99)"
-            >Buy Now</button>
-            <button
-              class="btn add"
-              onclick="addToCart('bella','./css/images/download.png', 19.99)"
-            >
-              Add to Cart
-            </button>
-            <button
-              onclick="toggleFavorite(this,'bella', './css/images/download.jpeg', 19.99)"
-              class="favorite-button"
-            >
-              Favorite
-            </button>
-          </div>
-        </div>
-        <div class="card">
+      <section class="banner">
+        <div class="banner-img">
           <img
-            src="./css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.webp"
-            alt="Product Image"
+            src="./css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.png"
+            alt="Banner Image"
           />
-          <div class="card-title">holland</div>
-          <div class="description">
-            Product Description Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </div>
-          <p>$19.99</p>
-          <div class="btn-container">
-            <button class="btn buy"
-            onclick="addToOrder('holland', './css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.webp', 19.99)"
-            >Buy Now</button>
-            <button
-              class="btn add"
-              onclick="addToCart('holland','./css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.webp', 19.99)"
-            >
-              Add to Cart
-            </button>
-            <button
-              onclick="toggleFavorite(this,'holland', './css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.webp', 19.99)"
-              class="favorite-button"
-            >
-              Favorite
-            </button>
+        </div>
+        <div class="banner-text">
+          <h1>Welcome to Our Store</h1>
+          <p>Discover the best deals on all your favorite products</p>
+        </div>
+      </section>
+
+      <section class="featured-products">
+        <div class="container">
+          <h2>Featured Products</h2>
+          <div class="product-grid">
+            <div class="product-card" onclick="redirectToProductPage()">
+              <img
+                src="./css/images/download.jpeg"
+                alt="Reversible Sherpa Windbreaker"
+              />
+              <h3>realme 80 cm (32 inch) TV</h3>
+              <p>₹10,999</p>
+              <div class="hidden popup" id="popup">
+                <div class="card">
+                  <div>
+                    <img src="./css/images/download.jpeg" alt="Product Image" />
+                  </div>
+                  <div class="details">
+                    <div>
+                      <div class="card-title">
+                        <h2>realme 80 cm (32 inch) TV</h2>
+                      </div>
+                      <div class="description">
+                        Bring home this TV from realme and experience the
+                        stunning visuals that result from its Chroma Boost
+                        Picture Engine. Boasting a Bezel-less design and Dolby
+                        Surround Audio.
+                      </div>
+                      <p>₹10,999</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card" onclick="redirectToProductPage()">
+              <img
+                src="./css/images/download.jpg"
+                alt="Reversible Sherpa Windbreaker"
+              />
+              <h3>Men Solid Padded Jacket</h3>
+              <p>₹1,199</p>
+              <div class="hidden popup" id="popup">
+                <div class="card">
+                  <div>
+                    <img src="./css/images/download.jpg" alt="Product Image" />
+                  </div>
+                  <div class="details">
+                    <div>
+                      <div class="card-title">
+                        <h2>Men Solid Padded Jacket</h2>
+                      </div>
+                      <div class="description">
+                        Make your wardrobe more trendy with this handsome olive
+                        jacket. This jacket from Roadster can be worn with
+                        distressed denims and a modern tee for a laid-back
+                        brunch outfit.
+                      </div>
+                      <p>₹1,199</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card" onclick="redirectToProductPage()">
+              <img
+                src="./css/images/mens-jackets-1563269239-5000234.jpeg"
+                alt="Reversible Sherpa Windbreaker"
+              />
+              <h3>Men Solid Quilted Jacket</h3>
+              <p>₹1,049</p>
+              <div class="hidden popup" id="popup">
+                <div class="card">
+                  <div>
+                    <img
+                      src="./css/images/mens-jackets-1563269239-5000234.jpeg"
+                      alt="Product Image"
+                    />
+                  </div>
+                  <div class="details">
+                    <div>
+                      <div class="card-title">
+                        <h2>Men Solid Quilted Jacket</h2>
+                      </div>
+                      <div class="description">
+                        Navy Blue solid quilted jacket, has a detachable hood, 3
+                        pockets, zip closure, long sleeves, straight hem, and
+                        polyester lining. Show off your handsome side with this
+                        trendy navy blue jacket.
+                      </div>
+                      <p>₹1,049</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-card" onclick="redirectToProductPage()">
+              <img
+                src="./css/images/1534-132-13324.jpg"
+                alt="Reversible Sherpa Windbreaker"
+              />
+              <h3>Men Navy Slim Fit Shirt</h3>
+              <p>₹ 2,799</p>
+              <div class="hidden popup" id="popup">
+                <div class="card">
+                  <div>
+                    <img
+                      src="./css/images/1534-132-13324.jpg"
+                      alt="Product Image"
+                    />
+                  </div>
+                  <div class="details">
+                    <div>
+                      <div class="card-title">
+                        <h2>Men Navy Slim Fit Shirt</h2>
+                      </div>
+                      <div class="description">
+                        Showcase your refined sartorial taste in this Navy Print
+                        shirt from Louis Philippe Sport at a Casual event.
+                        Tailored in Slim Fit this shirt features a Regular
+                        Collar and Half Sleeves.
+                      </div>
+                      <p>₹ 2,799</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <footer>
+      <p>&copy; 2024 Your Store. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/common.js"></script>
     <script src="./js/home.js"></script>
   </body>
 </html>

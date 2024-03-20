@@ -3,11 +3,12 @@
   flex-direction: column;
   align-items: center;
 }
-/* Style for favorite items */
+
+
 .favorite-item {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 80%; 
   padding: 15px;
   margin: 10px 0;
   border-radius: 10px;
@@ -16,13 +17,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Style for favorite items on hover */
+
 .favorite-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for product image */
+
 .product-image {
   width: 100px;
   height: 100px;
@@ -30,7 +31,7 @@
   border-radius: 8px;
 }
 
-/* Style for product info */
+
 .product-info {
   flex-grow: 1;
   display: flex;
@@ -38,20 +39,20 @@
   align-items: center;
 }
 
-/* Style for product name */
+
 .product-name {
   font-size: 20px;
   font-weight: bold;
   color: #333;
 }
 
-/* Style for product price */
+
 .product-price {
   font-size: 18px;
   color: #666;
 }
 
-/* Style for remove button */
+
 .remove-button {
   background-color: #ff5c5c;
   color: #fff;
@@ -62,7 +63,26 @@
   transition: background-color 0.3s ease;
 }
 
-/* Style for remove button on hover */
+
 .remove-button:hover {
   background-color: #e04444;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .favorite-item {
+    width: 90%; 
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .favorite-item {
+    width: 95%; 
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .favorite-item {
+    width: 100%; 
+  }
 }

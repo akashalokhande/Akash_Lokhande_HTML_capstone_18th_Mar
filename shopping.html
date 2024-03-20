@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/shoping.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bella</h1>
+    </header>
+    <nav>
+      <button id="toggleBtn">&#9776;</button>
+      <div id="navLinks">
+        <img
+          id="logo"
+          src="./css/images/bella-handwritten-name-logotype-signaturemanual-600nw-2176361551.png"
+          alt="Your Brand Logo"
+        />
+
+        <a href="./home.html">Home</a>
+        <a href="./shopping.html">Shop</a>
+        <a href="./favorites.html"> My Favorites</a>
+        <a href="order.html"> My Orders</a>
+        <a href="./cart.html">My Cart</a>
+      </div>
+    </nav>
+    <main>
+      <div class="AddSelectedtoCart">
+        <button
+          id="addToCartButton"
+          class="btn add"
+          style="display: none"
+          onclick="addToCartSelected()"
+        >
+          Add Selected to Cart
+        </button>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/download.jpeg" alt="tv Image" />
+
+          <div class="card-title">realme 80 cm (32 inch) TV</div>
+
+          <div class="description">
+            Bring home this TV from realme and experience the stunning visuals
+            that result from its Chroma Boost Picture Engine. Boasting a
+            Bezel-less design and Dolby Surround Audio.
+          </div>
+          <div class="data-price">₹10,999</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('realme 80 cm (32 inch) TV','./css/images/download.jpeg',10999)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('realme 80 cm (32 inch) TV','./css/images/download.jpeg',10999)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'realme 80 cm (32 inch) TV','./css/images/download.jpeg',10999)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/download.jpg" alt="jacket Image" />
+
+          <div class="card-title">Men Solid Padded Jacket</div>
+
+          <div class="description">
+            Make your wardrobe more trendy with this handsome olive jacket. This
+            jacket from Roadster can be worn with distressed denims and a modern
+            tee for a laid-back brunch outfit.
+          </div>
+          <div class="data-price">₹1,199</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('Men Solid Padded Jacket','./css/images/download.jpg',1199)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('Men Solid Padded Jacket','./css/images/download.jpg',1199)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'Men Solid Padded Jacket','./css/images/download.jpg',1199)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img
+            src="./css/images/mens-jackets-1563269239-5000234.jpeg"
+            alt="Jacket Image"
+          />
+
+          <div class="card-title">Men Solid Quilted Jacket</div>
+
+          <div class="description">
+            Navy Blue solid quilted jacket, has a detachable hood, 3 pockets,
+            zip closure, long sleeves, straight hem, and polyester lining. Show
+            off your handsome side with this trendy navy blue jacket.
+          </div>
+          <div class="data-price">₹1,049</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('Men Solid Quilted Jacket','./css/images/mens-jackets-1563269239-5000234.jpeg',1049)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('Men Solid Quilted Jacket','./css/images/mens-jackets-1563269239-5000234.jpeg',1049)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'Men Solid Quilted Jacket','./css/images/mens-jackets-1563269239-5000234.jpeg',1049)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/1534-132-13324.jpg" alt="shirt Image" />
+
+          <div class="card-title">Men Navy Slim Fit Shirt</div>
+
+          <div class="description">
+            Showcase your refined sartorial taste in this Navy Print shirt from
+            Louis Philippe Sport at a Casual event. Tailored in Slim Fit this
+            shirt features a Regular Collar and Half Sleeves.
+          </div>
+          <div class="data-price">₹ 2,799</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('Men Navy Slim Fit Shirt','./css/images/1534-132-13324.jpg',2799)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('Men Navy Slim Fit Shirt','./css/images/1534-132-13324.jpg',2799)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'Men Navy Slim Fit Shirt','./css/images/1534-132-13324.jpg',2799)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/download (1).jpeg" alt="Apple iPhone Image" />
+
+          <div class="card-title">Apple iPhone 14 Pro Max</div>
+
+          <div class="description">
+            6.7 inches Super Retina XDR Display, Apple A16 Bionic Processor,
+            4323 mAh Battery, 48MP + 12MP + 12MP + 12MP Rear Camera and 12MP
+            Front Camera
+          </div>
+          <div class="data-price">₹120,999</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('Apple iPhone 14 Pro Max','./css/images/download (1).jpeg',120999)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('Apple iPhone 14 Pro Max','./css/images/download (1).jpeg',120999)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'Apple iPhone 14 Pro Max','./css/images/download (1).jpeg',120999)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/download (3).jpeg" alt="Backpack Image" />
+
+          <div class="card-title">TOURIT Cooler Backpack</div>
+
+          <div class="description">
+            TOURIT Cooler Backpack 30 Cans Lightweight Insulated Backpack Cooler
+            Leak-Proof Soft Cooler Bag Large Capacity for Men Women to Picnics.
+          </div>
+          <div class="data-price">₹3,499</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('TOURIT Cooler Backpack','./css/images/download (3).jpeg',3499)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('TOURIT Cooler Backpack','./css/images/download (3).jpeg',3499)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'TOURIT Cooler Backpack','./css/images/download (3).jpeg',3499)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img src="./css/images/download (4).jpeg" alt="Hat Image" />
+
+          <div class="card-title">CAPITEUM Fedora Hat</div>
+
+          <div class="description">
+            CAPITEUM Fedora Hat for Men and Women UV Protection Summer Hat
+            Travel Use CreamCare Instructions Hand Wash Only Fit Type Adjustable
+          </div>
+          <div class="data-price">₹229</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('CAPITEUM Fedora Hat','./css/images/download (4).jpegjpeg',229)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('CAPITEUM Fedora Hat','./css/images/download (4).jpeg',229)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'CAPITEUM Fedora Hat','./css/images/download (4).jpeg',229)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="checkbox">
+            <input type="checkbox" class="product-checkbox" />
+          </div>
+          <img
+            src="./css/images/51OQ3sPBAsL._AC_UY1100_.jpg"
+            alt="sunglasses Image"
+          />
+
+          <div class="card-title">Black Full Rim Wayfare</div>
+
+          <div class="description">
+            Enhance your look with this pair of sunglasses by Vincent Chase.the
+            sunglasses feature a black which protects your eyes from UV rays.
+          </div>
+          <div class="data-price">₹1,500</div>
+
+          <div class="btn-container">
+            <button
+              class="btn buy"
+              onclick="addToOrder('Black Full Rim Wayfare','./css/images/51OQ3sPBAsL._AC_UY1100_.jpg',1500)"
+            >
+              Buy Now
+            </button>
+
+            <button
+              class="btn add"
+              onclick="addToCart('Black Full Rim Wayfare','./css/images/51OQ3sPBAsL._AC_UY1100_.jpg',1500)"
+            >
+              Add to Cart
+            </button>
+
+            <button
+              class="favorite-button"
+              onclick="toggleFavorite(this,'Black Full Rim Wayfare','./css/images/51OQ3sPBAsL._AC_UY1100_.jpg',1500)"
+            >
+              Favorite
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/common.js"></script>
+    <script src="./js/shoping.js"></script>
+  </body>
+</html>
